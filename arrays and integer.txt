@@ -1,0 +1,66 @@
+
+// Online IDE - Code Editor, Compiler, Interpreter
+
+
+public class Main
+{
+        public static int arraySum(int[] array) {
+        //this method calculates the sum of all elements in the input integer array
+        int size = 0;
+        for (int i = 0; i < array.length; i++) {
+            size += array[i];
+        }
+        return size;
+    }
+    
+    public static int arrayCount(int n,int[] array){
+        //this method counts the occurrences of a specific integer value n 
+        //in the input integer array
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == n) {
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    public static boolean isEeven(int n){
+        //this method return if n even or not
+        return n % 2 == 0;
+    }
+
+    public static int factorial(int n) {
+        //this method calculates the factorial of a non-negative integer n 
+        //using recursion
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
+
+    public static int search(int[] array, int value) {
+        //this method search for a specific integer value with 
+        //in input integer array
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3,2, 4, 5, 6,2};
+        System.out.println(Main.arraySum(numbers));
+        System.out.println(Main.factorial(3));
+        System.out.println(Main.search(numbers, 3));
+        System.out.println(Main.arrayCount(2, numbers));
+        System.out.println(Main.isEeven(9));
+    }
+}
+
+
+
